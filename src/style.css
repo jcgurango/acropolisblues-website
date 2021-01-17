@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Zoika Bold';
+  src: url(/fonts/Zoikabold.woff), url(/fonts/Zoikabold.woff2);
+  font-display: swap;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h1, h2, h3, h4, h5 {
+  line-height: 1.2;
+}
+
+#___gatsby {
+  height: 100%;
+}
+
+#gatsby-focus-wrapper {
+  height: 100%;
+}
+
+.visible-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.visible-hidden:focus {
+  clip: auto;
+  height: auto;
+  overflow: auto;
+  position: absolute;
+  width: auto;
+}
+
+p {
+  margin-top: 0px;
+}

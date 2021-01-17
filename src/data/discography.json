@@ -1,0 +1,118 @@
+[
+  {
+    "name": "Tell Me",
+    "type": "Single",
+    "year": "2018",
+    "links": [
+      {
+        "type": "spotify",
+        "url": "https://open.spotify.com/track/5sM4sO5lb8oYbpmD7riPyb"
+      },
+      {
+        "type": "apple",
+        "url": "https://music.apple.com/us/album/tell-me-single/1416604373"
+      },
+      {
+        "type": "youtube-music",
+        "url": "https://www.youtube.com/watch?v=TLDl9WuJy8M"
+      }
+    ],
+    "slug": "tell-me"
+  },
+  {
+    "name": "Never Alone",
+    "type": "Single",
+    "year": "2018",
+    "links": [
+      {
+        "type": "spotify",
+        "url": "https://open.spotify.com/track/6zLNQwDxriH3JhKnLXKHI4"
+      },
+      {
+        "type": "apple",
+        "url": "https://music.apple.com/us/album/never-alone-single/1439132182"
+      },
+      {
+        "type": "youtube-music",
+        "url": "https://www.youtube.com/watch?v=vitu_QicWoY"
+      }
+    ],
+    "slug": "never-alone"
+  },
+  {
+    "name": "Across the Sea",
+    "type": "Single",
+    "year": "2018",
+    "links": [
+      {
+        "type": "spotify",
+        "url": "https://open.spotify.com/track/3WJRPffP7wToEfyMV5MWdp"
+      },
+      {
+        "type": "apple",
+        "url": "https://music.apple.com/us/album/across-the-sea-single/1431830060"
+      },
+      {
+        "type": "youtube-music",
+        "url": "https://www.youtube.com/watch?v=BKMlZjWed28"
+      }
+    ],
+    "slug": "across-the-sea"
+  },
+  {
+    "name": "How Long",
+    "type": "Single",
+    "year": "2018",
+    "links": [
+      {
+        "type": "spotify",
+        "url": "https://open.spotify.com/track/2V6aPL3p3QSSZEOPv8PtzB"
+      },
+      {
+        "type": "apple",
+        "url": "https://music.apple.com/us/album/how-long/1440549392"
+      },
+      {
+        "type": "youtube-music",
+        "url": "https://www.youtube.com/watch?v=kmHu7FZu4HM"
+      }
+    ],
+    "slug": "how-long"
+  },
+  {
+    "name": "The Marketplace",
+    "type": "Album",
+    "year": "2018",
+    "links": [
+      {
+        "type": "spotify",
+        "url": "https://open.spotify.com/album/0LWHCZ5oyhYT0VQIzxBGju?si=TIxCffRiT8Cda5EwT9DMEQ"
+      },
+      {
+        "type": "apple",
+        "url": "https://music.apple.com/us/album/the-marketplace/1446079136"
+      }
+    ],
+    "slug": "the-marketplace"
+  },
+  {
+    "name": "City",
+    "type": "Single",
+    "year": "2020",
+    "links": [
+      {
+        "type": "spotify",
+        "url": "https://open.spotify.com/track/4ZVRrGcxKoBdJha7EUoAxp"
+      },
+      {
+        "type": "apple",
+        "url": "https://music.apple.com/us/album/city/1539216952"
+      },
+      {
+        "type": "youtube",
+        "url": "https://www.youtube.com/watch?v=ihRysGh2qlg"
+      }
+    ],
+    "slug": "city"
+  }
+]
