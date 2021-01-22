@@ -2,11 +2,16 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faApple, faSpotify, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MainContainer } from '../components/Container';
 import PageLayout from '../components/PageLayout';
 import BackgroundImage from 'gatsby-background-image';
 import colors from '../colors';
 import media from '../media';
+
+library.add(faApple, faSpotify, faYoutube);
 
 const Container = styled(MainContainer)`
   @media only screen and (min-width: 1000px) {
@@ -50,6 +55,27 @@ const AlbumImage = styled(Img)`
   text-align: center;
 `;
 
+const ListenContainer = styled.div`
+  text-align: left;
+`;
+
+
+const ListenLink = styled.a`
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 12px;
+  padding: 8px 12px;
+  color: ${({ color }) => (color || 'white')};
+  border: 1px solid ${({ color }) => (color || 'white')};
+  border-radius: 24px;
+  text-decoration: none;
+
+  > svg {
+    font-size: 12px;
+    margin-right: 4px;
+  }
+`;
+
 const DiscographyEntry = ({ data }) => {
   return (
     <PageLayout title={data.pageData.name}>
@@ -62,9 +88,40 @@ const DiscographyEntry = ({ data }) => {
       </BackgroundImage>
       <Container style={{ marginTop: '48px' }}>
         <div className="text" style={{ marginBottom: '16px' }} dangerouslySetInnerHTML={{ __html: data.linerNotes.markdown.html }} />
-        <div style={{ textAlign: 'center', whiteSpace: 'pre-line', fontStyle: 'italic' }}>
-          <iframe width="100%" height="52" title={`Listen to ${data.pageData.title}`} src={data.pageData.songlink} frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox"></iframe>
-          <div dangerouslySetInnerHTML={{ __html: data.lyrics.markdown.html }} style={{ marginTop: '24px' }} />
+        <div style={{ textAlign: 'center', whiteSpace: 'pre-line' }}>
+          <ListenContainer>
+            {data.pageData.links.map((link) => (
+              <ListenLink
+                key={link.type}
+                color={{
+                  spotify: '#1DB954',
+                  'youtube-music': '#FF0000',
+                  youtube: '#FF0000'
+                }[link.type]}
+                href={link.url}
+                target="_blank"
+              >
+                <FontAwesomeIcon
+                  icon={[
+                    'fab',
+                    {
+                      spotify: 'spotify',
+                      apple: 'apple',
+                      'youtube-music': 'youtube',
+                      youtube: 'youtube'
+                    }[link.type],
+                  ]}
+                />
+                {{
+                  spotify: 'Listen on Spotify',
+                  apple: 'Listen on Apple Music',
+                  'youtube-music': 'Listen on YouTube',
+                  youtube: 'Watch on YouTube'
+                }[link.type]}
+              </ListenLink>
+            ))}
+          </ListenContainer>
+          <div dangerouslySetInnerHTML={{ __html: data.lyrics.markdown.html }} style={{ marginTop: '24px', fontStyle: 'italic' }} />
         </div>
       </Container>
     </PageLayout>

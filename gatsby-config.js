@@ -34,5 +34,11 @@ module.exports = {
         path: `./src/data/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.acropolisblues.com`,
+      },
+    },
   ],
 }

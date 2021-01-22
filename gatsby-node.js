@@ -24,5 +24,14 @@ exports.createPages = async ({ graphql, actions }) => {
         liners: `discography/linernotes/${slug}.md`,
       },
     });
+
+    createPage({
+      path: `/discography/${slug}/interstitial/`,
+      component: path.resolve(`./src/templates/discography-interstitial.js`),
+      context: {
+        slug,
+        headerImage: `discography/covers/${slug}.jpg`,
+      },
+    });
   });
 };
