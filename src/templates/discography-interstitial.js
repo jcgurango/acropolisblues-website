@@ -107,6 +107,9 @@ const DiscographyInterstitial = ({ data }) => {
             }[link.type]}
           </ListenLink>
         ))}
+        <ListenLink href={`/discography/${data.pageData.slug}/`}>
+          More Info
+        </ListenLink>
       </Description>
     </BackgroundImage>
   )
