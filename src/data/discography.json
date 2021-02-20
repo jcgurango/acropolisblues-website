@@ -114,5 +114,17 @@
       }
     ],
     "slug": "city"
+  },
+  {
+    "name": "New House",
+    "type": "Single",
+    "year": "2021",
+    "links": [
+      {
+        "type": "spotify-presave",
+        "url": "https://distrokid.com/hyperfollow/acropolisblues/new-house-feat-ivee-bongosia"
+      }
+    ],
+    "slug": "new-house"
   }
 ]

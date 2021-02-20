@@ -2,12 +2,12 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
+import BackgroundImage from 'gatsby-background-image';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faApple, faSpotify, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MainContainer } from '../components/Container';
 import PageLayout from '../components/PageLayout';
-import BackgroundImage from 'gatsby-background-image';
 import colors from '../colors';
 import media from '../media';
 
@@ -57,12 +57,20 @@ const AlbumImage = styled(Img)`
 
 const ListenContainer = styled.div`
   text-align: left;
+  display: ${({ mobile }) => mobile ? 'block' : 'none'};
+
+  @media only screen and (min-width: 1000px) {
+    display: ${({ mobile }) => mobile ? 'none' : 'block'};
+  }
 `;
 
 
 const ListenLink = styled.a`
-  display: inline-block;
+  display: block;
+  text-align: center;
+  margin-left: 12px;
   margin-right: 12px;
+  margin-top: 12px;
   font-size: 12px;
   padding: 8px 12px;
   color: ${({ color }) => (color || 'white')};
@@ -73,6 +81,12 @@ const ListenLink = styled.a`
   > svg {
     font-size: 12px;
     margin-right: 4px;
+  }
+
+  @media only screen and (min-width: 1000px) {
+    display: inline-block;
+    margin-left: 0px;
+    margin-top: 0px;
   }
 `;
 
@@ -86,6 +100,41 @@ const DiscographyEntry = ({ data }) => {
           <h2>{data.pageData.year} {data.pageData.type} by Acropolis Blues</h2>
         </Description>
       </BackgroundImage>
+      <ListenContainer mobile>
+        {data.pageData.links.map((link) => (
+          <ListenLink
+            key={link.type}
+            color={{
+              spotify: '#1DB954',
+              'spotify-presave': '#1DB954',
+              'youtube-music': '#FF0000',
+              youtube: '#FF0000'
+            }[link.type]}
+            href={link.url}
+            target="_blank"
+          >
+            <FontAwesomeIcon
+              icon={[
+                'fab',
+                {
+                  spotify: 'spotify',
+                  'spotify-presave': 'spotify',
+                  apple: 'apple',
+                  'youtube-music': 'youtube',
+                  youtube: 'youtube'
+                }[link.type],
+              ]}
+            />
+            {{
+              spotify: 'Listen on Spotify',
+              'spotify-presave': 'Pre-Save on Spotify',
+              apple: 'Listen on Apple Music',
+              'youtube-music': 'Listen on YouTube',
+              youtube: 'Watch on YouTube'
+            }[link.type]}
+          </ListenLink>
+        ))}
+      </ListenContainer>
       <Container style={{ marginTop: '48px' }}>
         <div className="text" style={{ marginBottom: '16px' }} dangerouslySetInnerHTML={{ __html: data.linerNotes.markdown.html }} />
         <div style={{ textAlign: 'center', whiteSpace: 'pre-line' }}>
@@ -95,6 +144,7 @@ const DiscographyEntry = ({ data }) => {
                 key={link.type}
                 color={{
                   spotify: '#1DB954',
+                  'spotify-presave': '#1DB954',
                   'youtube-music': '#FF0000',
                   youtube: '#FF0000'
                 }[link.type]}
@@ -106,6 +156,7 @@ const DiscographyEntry = ({ data }) => {
                     'fab',
                     {
                       spotify: 'spotify',
+                      'spotify-presave': 'spotify',
                       apple: 'apple',
                       'youtube-music': 'youtube',
                       youtube: 'youtube'
@@ -114,6 +165,7 @@ const DiscographyEntry = ({ data }) => {
                 />
                 {{
                   spotify: 'Listen on Spotify',
+                  'spotify-presave': 'Pre-Save on Spotify',
                   apple: 'Listen on Apple Music',
                   'youtube-music': 'Listen on YouTube',
                   youtube: 'Watch on YouTube'

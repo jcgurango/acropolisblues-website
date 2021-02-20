@@ -75,14 +75,15 @@ const DiscographyInterstitial = ({ data }) => {
             key={link.type}
             color={{
               spotify: '#1DB954',
+              'spotify-presave': '#1DB954',
               'youtube-music': '#FF0000',
               youtube: '#FF0000'
             }[link.type]}
             href={link.url}
             rel="noopener noreferrer"
-            target="_blank"
+            target="_blank" 
             onClick={() => {
-              fbq('trackCustom', 'Listen', { destination: link.type, song: data.pageData.slug });
+              window.fbq('trackCustom', 'Listen', { destination: link.type, song: data.pageData.slug });
             }}
           >
             <FontAwesomeIcon
@@ -90,6 +91,7 @@ const DiscographyInterstitial = ({ data }) => {
                 'fab',
                 {
                   spotify: 'spotify',
+                  'spotify-presave': 'spotify',
                   apple: 'apple',
                   'youtube-music': 'youtube',
                   youtube: 'youtube'
@@ -98,6 +100,7 @@ const DiscographyInterstitial = ({ data }) => {
             />
             {{
               spotify: 'Listen on Spotify',
+              'spotify-presave': 'Pre-Save on Spotify',
               apple: 'Listen on Apple Music',
               'youtube-music': 'Listen on YouTube',
               youtube: 'Watch Music Video on YouTube'

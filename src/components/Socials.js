@@ -50,21 +50,13 @@ export const SocialLinks = () => {
         <SocialIcon icon={['fab', 'instagram']} />
         <span className="visible-hidden">Acropolis Blues on Instagram</span>
       </a>{/* eslint-disable-line */}
-      <a href="https://www.facebook.com/acropolisblues">
-        <SocialIcon icon={['fab', 'facebook-square']} />
+      <a href="https://www.youtube.com/channel/UCma3jfZUt--VuZ9zibZKHKQ">
+        <SocialIcon icon={['fab', 'youtube']} />
         <span className="visible-hidden">Acropolis Blues on Facebook</span>
       </a>{/* eslint-disable-line */}
       <a href="https://soundcloud.com/acropolisblues">
         <SocialIcon icon={['fab', 'soundcloud']} />
         <span className="visible-hidden">Acropolis Blues on SoundCloud</span>
-      </a>{/* eslint-disable-line */}
-      <a href="https://twitter.com/acropolisblues">
-        <SocialIcon icon={['fab', 'twitter']} />
-        <span className="visible-hidden">Acropolis Blues on Twitter</span>
-      </a>{/* eslint-disable-line */}
-      <a href="https://www.youtube.com/channel/UCma3jfZUt--VuZ9zibZKHKQ">
-        <SocialIcon icon={['fab', 'youtube']} />
-        <span className="visible-hidden">Acropolis Blues on Facebook</span>
       </a>{/* eslint-disable-line */}
     </>
   );
