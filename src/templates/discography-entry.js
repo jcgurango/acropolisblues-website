@@ -108,7 +108,8 @@ const DiscographyEntry = ({ data }) => {
               spotify: '#1DB954',
               'spotify-presave': '#1DB954',
               'youtube-music': '#FF0000',
-              youtube: '#FF0000'
+              youtube: '#FF0000',
+              'youtube-bts': '#FF0000',
             }[link.type]}
             href={link.url}
             target="_blank"
@@ -121,7 +122,8 @@ const DiscographyEntry = ({ data }) => {
                   'spotify-presave': 'spotify',
                   apple: 'apple',
                   'youtube-music': 'youtube',
-                  youtube: 'youtube'
+                  youtube: 'youtube',
+                  'youtube-bts': 'youtube',
                 }[link.type],
               ]}
             />
@@ -130,7 +132,8 @@ const DiscographyEntry = ({ data }) => {
               'spotify-presave': 'Pre-Save on Spotify',
               apple: 'Listen on Apple Music',
               'youtube-music': 'Listen on YouTube',
-              youtube: 'Watch on YouTube'
+              youtube: 'Watch on YouTube',
+              'youtube-bts': 'Watch BTS on YouTube',
             }[link.type]}
           </ListenLink>
         ))}
@@ -146,7 +149,8 @@ const DiscographyEntry = ({ data }) => {
                   spotify: '#1DB954',
                   'spotify-presave': '#1DB954',
                   'youtube-music': '#FF0000',
-                  youtube: '#FF0000'
+                  youtube: '#FF0000',
+                  'youtube-bts': '#FF0000',
                 }[link.type]}
                 href={link.url}
                 target="_blank"
@@ -159,7 +163,8 @@ const DiscographyEntry = ({ data }) => {
                       'spotify-presave': 'spotify',
                       apple: 'apple',
                       'youtube-music': 'youtube',
-                      youtube: 'youtube'
+                      youtube: 'youtube',
+                      'youtube-bts': 'youtube',
                     }[link.type],
                   ]}
                 />
@@ -168,7 +173,8 @@ const DiscographyEntry = ({ data }) => {
                   'spotify-presave': 'Pre-Save on Spotify',
                   apple: 'Listen on Apple Music',
                   'youtube-music': 'Listen on YouTube',
-                  youtube: 'Watch on YouTube'
+                  youtube: 'Watch on YouTube',
+                  'youtube-bts': 'Watch BTS on YouTube'
                 }[link.type]}
               </ListenLink>
             ))}

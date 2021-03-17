@@ -121,8 +121,12 @@
     "year": "2021",
     "links": [
       {
-        "type": "spotify-presave",
-        "url": "https://distrokid.com/hyperfollow/acropolisblues/new-house-feat-ivee-bongosia"
+        "type": "spotify",
+        "url": "https://open.spotify.com/track/0HIFEDQDLM0n7gEYs2DFqB"
+      },
+      {
+        "type": "youtube-bts",
+        "url": "https://youtu.be/iP7zwm_bYvM"
       }
     ],
     "slug": "new-house"

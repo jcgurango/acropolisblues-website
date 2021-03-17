@@ -77,7 +77,8 @@ const DiscographyInterstitial = ({ data }) => {
               spotify: '#1DB954',
               'spotify-presave': '#1DB954',
               'youtube-music': '#FF0000',
-              youtube: '#FF0000'
+              youtube: '#FF0000',
+              'youtube-bts': '#FF0000',
             }[link.type]}
             href={link.url}
             rel="noopener noreferrer"
@@ -94,7 +95,8 @@ const DiscographyInterstitial = ({ data }) => {
                   'spotify-presave': 'spotify',
                   apple: 'apple',
                   'youtube-music': 'youtube',
-                  youtube: 'youtube'
+                  youtube: 'youtube',
+                  'youtube-bts': 'youtube',
                 }[link.type],
               ]}
             />
@@ -103,7 +105,8 @@ const DiscographyInterstitial = ({ data }) => {
               'spotify-presave': 'Pre-Save on Spotify',
               apple: 'Listen on Apple Music',
               'youtube-music': 'Listen on YouTube',
-              youtube: 'Watch Music Video on YouTube'
+              youtube: 'Watch Music Video on YouTube',
+              'youtube-bts': 'Watch Behind the Scenes on YouTube'
             }[link.type]}
           </ListenLink>
         ))}
