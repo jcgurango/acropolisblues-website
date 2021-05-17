@@ -112,7 +112,11 @@ const DiscographyEntry = ({ data }) => {
               'youtube-bts': '#FF0000',
             }[link.type]}
             href={link.url}
+            rel="noopener noreferrer"
             target="_blank"
+            onClick={() => {
+              window.fbq('trackCustom', 'Listen', { destination: link.type, song: data.pageData.slug });
+            }}
           >
             <FontAwesomeIcon
               icon={[
@@ -153,7 +157,11 @@ const DiscographyEntry = ({ data }) => {
                   'youtube-bts': '#FF0000',
                 }[link.type]}
                 href={link.url}
+                rel="noopener noreferrer"
                 target="_blank"
+                onClick={() => {
+                  window.fbq('trackCustom', 'Listen', { destination: link.type, song: data.pageData.slug });
+                }}
               >
                 <FontAwesomeIcon
                   icon={[

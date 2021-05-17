@@ -70,7 +70,7 @@ const Discography = ({ data }) => {
   return (
     <PageLayout background={data.backgroundImage} style={{ backgroundSize: 'cover', backgroundPosition: 'center 20%' }} title="Discography">
       <Container>
-        {discography.slice(0).reverse().map(({ slug, name, type, year }) => (
+        {discography.slice(0).reverse().map(({ slug, name, type, year, unlisted }) => unlisted ? null : (
           <ItemContainer to={`/discography/${slug}/`} key={slug}>
             <Img fixed={images.find(({ relativePath }) => String(relativePath).startsWith(`discography/covers/${slug}`)).sharp.fixed} />
             <ItemDetailsContainer style={{ opacity: 0 }} className="details">
@@ -106,6 +106,7 @@ export const query = graphql`
         type
         year
         slug
+        unlisted
       }
     }
     images: allFile(filter: {relativePath: {regex: "/^discography\/covers\/.*/"}}) {

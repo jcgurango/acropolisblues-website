@@ -130,5 +130,18 @@
       }
     ],
     "slug": "new-house"
+  },
+  {
+    "name": "Pahinga Lang Muna",
+    "type": "Single",
+    "year": "2021",
+    "links": [
+      {
+        "type": "spotify",
+        "url": "https://open.spotify.com/track/0HIFEDQDLM0n7gEYs2DFqB"
+      }
+    ],
+    "slug": "pahinga-lang-muna",
+    "unlisted": true
   }
 ]

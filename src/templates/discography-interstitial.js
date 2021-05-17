@@ -44,6 +44,14 @@ const ListenLink = styled.a`
   }
 `;
 
+const TitleText = styled.div`
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  font-size: 1.5em;
+  padding: 1em;
+  color: white;
+`;
+
 const DiscographyInterstitial = ({ data }) => {
   return (
     <BackgroundImage fluid={data.headerImage.image.fluid} style={{ width: '100%', height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', backgroundAttachment: 'fixed' }} id="bg">
@@ -70,6 +78,9 @@ const DiscographyInterstitial = ({ data }) => {
       </Helmet>
       <AlbumImage fluid={data.albumArt.image.fluid} />
       <Description>
+        <TitleText>
+          <b>{data.pageData.name}</b>
+        </TitleText>
         {data.pageData.links.map((link) => (
           <ListenLink
             key={link.type}
@@ -82,7 +93,7 @@ const DiscographyInterstitial = ({ data }) => {
             }[link.type]}
             href={link.url}
             rel="noopener noreferrer"
-            target="_blank" 
+            target="_blank"
             onClick={() => {
               window.fbq('trackCustom', 'Listen', { destination: link.type, song: data.pageData.slug });
             }}
@@ -110,7 +121,7 @@ const DiscographyInterstitial = ({ data }) => {
             }[link.type]}
           </ListenLink>
         ))}
-        <ListenLink href={`/discography/${data.pageData.slug}/`}>
+        <ListenLink href={data.pageData.unlisted ? `/` : `/discography/${data.pageData.slug}/`}>
           More Info
         </ListenLink>
       </Description>
@@ -131,6 +142,7 @@ export const query = graphql`
         type
         url
       }
+      unlisted
     }
     headerImage: file(relativePath: { eq: $headerImage }) {
       image: childImageSharp {
