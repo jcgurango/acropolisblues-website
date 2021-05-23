@@ -137,8 +137,9 @@
     "year": "2021",
     "links": [
       {
-        "type": "spotify",
-        "url": "https://open.spotify.com/track/0HIFEDQDLM0n7gEYs2DFqB"
+        "type": "spotify-presave",
+        "url": "https://distrokid.com/hyperfollow/acropolisblues/pahinga-lang-muna",
+        "releaseDate": "May 27th"
       }
     ],
     "slug": "pahinga-lang-muna",

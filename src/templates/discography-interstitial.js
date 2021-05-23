@@ -81,46 +81,82 @@ const DiscographyInterstitial = ({ data }) => {
         <TitleText>
           <b>{data.pageData.name}</b>
         </TitleText>
-        {data.pageData.links.map((link) => (
-          <ListenLink
-            key={link.type}
-            color={{
-              spotify: '#1DB954',
-              'spotify-presave': '#1DB954',
-              'youtube-music': '#FF0000',
-              youtube: '#FF0000',
-              'youtube-bts': '#FF0000',
-            }[link.type]}
-            href={link.url}
-            rel="noopener noreferrer"
-            target="_blank"
-            onClick={() => {
-              window.fbq('trackCustom', 'Listen', { destination: link.type, song: data.pageData.slug });
-            }}
-          >
-            <FontAwesomeIcon
-              icon={[
-                'fab',
-                {
-                  spotify: 'spotify',
-                  'spotify-presave': 'spotify',
-                  apple: 'apple',
-                  'youtube-music': 'youtube',
-                  youtube: 'youtube',
-                  'youtube-bts': 'youtube',
-                }[link.type],
-              ]}
-            />
-            {{
-              spotify: 'Listen on Spotify',
-              'spotify-presave': 'Pre-Save on Spotify',
-              apple: 'Listen on Apple Music',
-              'youtube-music': 'Listen on YouTube',
-              youtube: 'Watch Music Video on YouTube',
-              'youtube-bts': 'Watch Behind the Scenes on YouTube'
-            }[link.type]}
-          </ListenLink>
-        ))}
+        {data.pageData.links.map((link) => {
+          if (link.type === 'spotify-presave') {
+            return (
+              <>
+                <ListenLink
+                  key={link.type}
+                  color="#1DB954"
+                  href={link.url}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  onClick={() => {
+                    window.fbq('trackCustom', 'Listen', { destination: link.type, song: data.pageData.slug });
+                  }}
+                >
+                  <span>
+                    <FontAwesomeIcon
+                      icon={[
+                        'fab',
+                        'spotify',
+                      ]}
+                    />
+                    &nbsp;
+                    Pre-Save on Spotify
+                  </span>
+                  <br />
+                  <small>
+                    <b>
+                      Sorry, this song isn't out yet! It's coming out on {link.releaseDate}! You can click here to pre-save it, though.
+                    </b>
+                  </small>
+                </ListenLink>
+              </>
+            );
+          }
+
+          return (
+            <ListenLink
+              key={link.type}
+              color={{
+                spotify: '#1DB954',
+                'spotify-presave': '#1DB954',
+                'youtube-music': '#FF0000',
+                youtube: '#FF0000',
+                'youtube-bts': '#FF0000',
+              }[link.type]}
+              href={link.url}
+              rel="noopener noreferrer"
+              target="_blank"
+              onClick={() => {
+                window.fbq('trackCustom', 'Listen', { destination: link.type, song: data.pageData.slug });
+              }}
+            >
+              <FontAwesomeIcon
+                icon={[
+                  'fab',
+                  {
+                    spotify: 'spotify',
+                    'spotify-presave': 'spotify',
+                    apple: 'apple',
+                    'youtube-music': 'youtube',
+                    youtube: 'youtube',
+                    'youtube-bts': 'youtube',
+                  }[link.type],
+                ]}
+              />
+              {{
+                spotify: 'Listen on Spotify',
+                'spotify-presave': 'Pre-Save on Spotify',
+                apple: 'Listen on Apple Music',
+                'youtube-music': 'Listen on YouTube',
+                youtube: 'Watch Music Video on YouTube',
+                'youtube-bts': 'Watch Behind the Scenes on YouTube'
+              }[link.type]}
+            </ListenLink>
+          );
+        })}
         <ListenLink href={data.pageData.unlisted ? `/` : `/discography/${data.pageData.slug}/`}>
           More Info
         </ListenLink>
@@ -141,6 +177,7 @@ export const query = graphql`
       links {
         type
         url
+        releaseDate
       }
       unlisted
     }
