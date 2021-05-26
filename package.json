@@ -12,7 +12,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "serverless"
+    "deploy": "serverless && node invalidate.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
@@ -42,6 +42,8 @@
   },
   "devDependencies": {
     "@serverless/website": "^4.0.0",
+    "aws-sdk": "^2.913.0",
+    "dotenv": "^10.0.0",
     "prettier": "2.1.2",
     "serverless": "^2.19.0"
   },
