@@ -17,7 +17,8 @@
         "url": "https://www.youtube.com/watch?v=TLDl9WuJy8M"
       }
     ],
-    "slug": "tell-me"
+    "slug": "tell-me",
+    "unlisted": false
   },
   {
     "name": "Never Alone",
@@ -37,7 +38,8 @@
         "url": "https://www.youtube.com/watch?v=vitu_QicWoY"
       }
     ],
-    "slug": "never-alone"
+    "slug": "never-alone",
+    "unlisted": false
   },
   {
     "name": "Across the Sea",
@@ -57,7 +59,8 @@
         "url": "https://www.youtube.com/watch?v=BKMlZjWed28"
       }
     ],
-    "slug": "across-the-sea"
+    "slug": "across-the-sea",
+    "unlisted": false
   },
   {
     "name": "How Long",
@@ -77,7 +80,8 @@
         "url": "https://www.youtube.com/watch?v=kmHu7FZu4HM"
       }
     ],
-    "slug": "how-long"
+    "slug": "how-long",
+    "unlisted": false
   },
   {
     "name": "The Marketplace",
@@ -93,7 +97,8 @@
         "url": "https://music.apple.com/us/album/the-marketplace/1446079136"
       }
     ],
-    "slug": "the-marketplace"
+    "slug": "the-marketplace",
+    "unlisted": false
   },
   {
     "name": "City",
@@ -113,7 +118,8 @@
         "url": "https://www.youtube.com/watch?v=ihRysGh2qlg"
       }
     ],
-    "slug": "city"
+    "slug": "city",
+    "unlisted": false
   },
   {
     "name": "New House",
@@ -125,11 +131,16 @@
         "url": "https://open.spotify.com/track/0HIFEDQDLM0n7gEYs2DFqB"
       },
       {
+        "type": "apple",
+        "url": "https://open.spotify.com/track/0HIFEDQDLM0n7gEYs2DFqB"
+      },
+      {
         "type": "youtube-bts",
         "url": "https://youtu.be/iP7zwm_bYvM"
       }
     ],
-    "slug": "new-house"
+    "slug": "new-house",
+    "unlisted": false
   },
   {
     "name": "Pahinga Lang Muna",
@@ -138,11 +149,19 @@
     "links": [
       {
         "type": "spotify",
-        "url": "https://distrokid.com/hyperfollow/acropolisblues/pahinga-lang-muna",
+        "url": "https://open.spotify.com/album/5432gXHxI20ogXF78NxfiJ",
         "releaseDate": "May 27th"
+      },
+      {
+        "type": "apple",
+        "url": "https://music.apple.com/us/album/pahinga-lang-muna-single/1566003903"
+      },
+      {
+        "type": "youtube",
+        "url": "https://www.youtube.com/watch?v=D3AJdc1q5d8"
       }
     ],
     "slug": "pahinga-lang-muna",
-    "unlisted": true
+    "unlisted": false
   }
 ]

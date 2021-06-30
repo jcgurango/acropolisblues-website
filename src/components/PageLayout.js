@@ -116,7 +116,7 @@ const PageLayout = ({
           meta={[
             {
               name: 'description',
-              content: 'Acropolis Blues is a Filipino Alternative Pop Rock band led by JC Mijares Gurango.',
+              content: 'Acropolis Blues is a Filipino Alternative Pop/Rock artist.',
             }
           ]}
         >
