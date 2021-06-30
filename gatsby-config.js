@@ -40,5 +40,11 @@ module.exports = {
         siteUrl: `https://www.acropolisblues.com`,
       },
     },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: `806126813446059`,
+      },
+    },
   ],
 }
