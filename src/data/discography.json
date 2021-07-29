@@ -163,5 +163,26 @@
     ],
     "slug": "pahinga-lang-muna",
     "unlisted": false
+  },
+  {
+    "name": "The Ball",
+    "type": "Single",
+    "year": "2021",
+    "links": [
+      {
+        "type": "spotify",
+        "url": "https://open.spotify.com/album/4IBX2wZswoDeTXfvtqSm1f",
+        "releaseDate": "May 27th"
+      },
+      {
+        "type": "apple",
+        "url": "https://music.apple.com/us/album/the-ball-feat-mishaelle-castro-single/1574787067"
+      },
+      {
+        "type": "youtube",
+        "url": "https://www.youtube.com/watch?v=DoJUbNAU85o"
+      }
+    ],
+    "slug": "the-ball"
   }
 ]
