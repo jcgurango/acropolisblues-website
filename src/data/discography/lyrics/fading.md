@@ -1,0 +1,17 @@
+Between these walls I am imprisoned,
+In a box of my design,
+I close my eyes and beg for vision,
+But all I see is streaks of white,
+I'm fading,
+I, I'm fading,
+
+And all my life I've felt the borders,
+From all the lines that others leave,
+I'd pace the halls and every corner,
+Wondering if anybody feels like me,
+I'm fading,
+I, I'm fading,
+
+Take my soul,
+Take all that I know,
+I have lost all control,

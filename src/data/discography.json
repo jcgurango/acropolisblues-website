@@ -171,8 +171,7 @@
     "links": [
       {
         "type": "spotify",
-        "url": "https://open.spotify.com/album/4IBX2wZswoDeTXfvtqSm1f",
-        "releaseDate": "May 27th"
+        "url": "https://open.spotify.com/album/4IBX2wZswoDeTXfvtqSm1f"
       },
       {
         "type": "apple",
@@ -183,6 +182,27 @@
         "url": "https://www.youtube.com/watch?v=DoJUbNAU85o"
       }
     ],
-    "slug": "the-ball"
+    "slug": "the-ball",
+    "unlisted": false
+  },
+  {
+    "name": "Fading",
+    "type": "Single",
+    "year": "2022",
+    "links": [
+      {
+        "type": "spotify",
+        "url": "https://open.spotify.com/track/2iEhfj6BA90mnujilw4ICn"
+      },
+      {
+        "type": "apple",
+        "url": "https://music.apple.com/us/album/fading-feat-acropolis-blues-christian-ituriaga-single/1655220796"
+      },
+      {
+        "type": "youtube",
+        "url": "https://www.youtube.com/watch?v=2gABbhXj3rg"
+      }
+    ],
+    "unlisted": false
   }
 ]
