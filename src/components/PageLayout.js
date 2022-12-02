@@ -11,11 +11,11 @@ import media from '../media';
 import Socials from './Socials';
 
 const MainContainer = styled.div`
-  font-family: Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+  font-family: 'Work Sans', Arial, Helvetica, sans-serif;
 `;
 
 const MainBackgroundImageContainer = styled(BackgroundImage)`
-  font-family: Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+  font-family: 'Work Sans', Arial, Helvetica, sans-serif;
   background-attachment: fixed;
   background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 `;

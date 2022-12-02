@@ -26,7 +26,7 @@ const AlbumImage = styled(Img)`
 `;
 
 const ListenLink = styled.a`
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Work Sans', Arial, Helvetica, sans-serif;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -45,7 +45,7 @@ const ListenLink = styled.a`
 `;
 
 const TitleText = styled.div`
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Work Sans', Arial, Helvetica, sans-serif;
   background-color: black;
   font-size: 1.5em;
   padding: 1em;
